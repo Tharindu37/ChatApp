@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="406.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seekerscloud.chat_app.controller.ClientFormController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/app-background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="6.0" minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="447.0">
+         <children>
+            <ScrollPane fx:id="scrollPane" layoutY="34.0" prefHeight="325.0" prefWidth="450.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="vBox_msg" prefHeight="325.0" prefWidth="451.0" />
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="2.0" prefHeight="38.0" prefWidth="450.0" style="-fx-background-color: #dfe4ea;">
+         <children>
+            <Label fx:id="lblClient" layoutX="14.0" layoutY="6.0" text="Client">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView glyphName="POWER" layoutX="411.0" layoutY="28.0" onMouseClicked="#exitClientOnClicked" size="25">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtMessageBox" layoutX="9.0" layoutY="372.0" prefHeight="27.0" prefWidth="390.0" />
+      <MaterialDesignIconView fill="WHITE" glyphName="SEND" layoutX="411.0" layoutY="394.0" onMouseClicked="#sendMessageOnAction" size="25">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <MaterialDesignIconView glyphName="ATTACHMENT" layoutX="342.0" layoutY="392.0" size="20" />
+      <MaterialDesignIconView glyphName="CAMERA" layoutX="371.0" layoutY="393.0" size="20" />
+      <MaterialDesignIconView glyphName="EMOTICON" layoutX="14.0" layoutY="393.0" size="20" />
+   </children>
+</AnchorPane>
